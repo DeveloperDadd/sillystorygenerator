@@ -11,7 +11,7 @@ function randomValueFromArray(array){
 
 // RAW TEXT STRINGS
 
-const storyText = It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.;
+const storyText = "It was 94 fahrenheit outside, so " + ${xItem} + " went for a walk. When they got to " + ${yItem} +", they stared in horror for a few moments, then " + ${zItem} + ". Bob saw the whole thing, but was not surprised — " + ${xItem} + ": weighs 300 pounds, and it was a hot day.";
 
 const insertX = ["Willy the Goblin","Big Daddy","Father Christmas"];
 
@@ -32,15 +32,16 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-
+    newStory.replace('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    const weight = Math.round(300/14) + ' stone';
+    const temperature =  Math.round((94 - 32) * / 9) + ' centigrade';
+
 
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
