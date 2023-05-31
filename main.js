@@ -21,10 +21,15 @@ const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewal
 
 // EVENT LISTENER AND PARTIAL FUNCTION DEFINITION 
 
+let newStory = storyText;
+let xItem = randomValueFromArray(insertX);
+let yItem = randomValueFromArray(insertY);
+let zItem = randomValueFromArray(insertZ);
+
 randomize.addEventListener('click', result);
 
 function result() {
-
+  
   if(customName.value !== '') {
     const name = customName.value;
 
