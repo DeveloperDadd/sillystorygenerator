@@ -30,9 +30,13 @@ function result() {
     let yItem = randomValueFromArray(insertY);
     let zItem = randomValueFromArray(insertZ);
 
+    newStory = newStory.replaceAll(":insertx:", xItem);
+    newStory = newStory.replaceAll(":inserty:", yItem);
+    newStory = newStory.replaceAll(":insertz:", zItem);
+
   if(customName.value !== '') {
     const name = customName.value;
-    newStory.replace('Bob', name);
+    newStory = newStory.replace("Bob", name);
   }
 
   if(document.getElementById("uk").checked) {
